@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - My Online Shop</title>
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+  <div class="login-form" style="background-color:aliceblue;">
+    <h2>Login</h2>
+    <input type="text" placeholder="Username" id="username" style="border-radius: 5px;"/>
+    <input type="password" placeholder="Password" id="password" style="border-radius: 5px;" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      if (user && pass) {
+        alert("Login successful!");
+        window.location.href = 'index.html'; // Or redirect to dashboard
+      } else {
+        alert("Please enter username and password.");
+      }
+    }
+  </script>
+</body>
+</html>
